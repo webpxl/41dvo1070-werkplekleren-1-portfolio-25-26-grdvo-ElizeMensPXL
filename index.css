@@ -109,3 +109,33 @@ article::before {
     color: #0e4070;
     background: #F2EBD9;
 }
+
+.diploma-image{
+    height: 430px;
+}
+
+.project-person {
+    background-color: #283D28;
+    color: #F2EBD9;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 1rem;
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.extra{
+    background-color: #283D28;
+    color: #F2EBD9;
+    padding: 60px;
+    border-radius: 20px;
+}
+
+footer{
+    background-color: #283D28;
+    color: #F2EBD9;
+    padding: 20px;
+    text-align: center;
+    box-shadow:0 -5px 5px -2px #0e4070;
+}
