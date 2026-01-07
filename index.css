@@ -11,3 +11,47 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
 }
+
+.navbar-main{
+    background-color:#283D28;
+    padding: 20px 0;
+    position: sticky;
+    box-shadow:0 5px 5px -2px #0e4070;
+    top:0;
+}
+
+.nav-container{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-student{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #0e4070;
+    text-decoration: none;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    align-items: center;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #F2EBD9;
+    font-weight: bold;
+    font-size: 0.9rem
+}
+
+.nav-links a:hover {
+    color: #0e4070;
+}
