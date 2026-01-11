@@ -4,12 +4,31 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: #F2EBD9;
-    color: #1A1A1A;
-    font-family: 'Inter', sans-serif;
-    margin: 0;
+    background-image: repeating-linear-gradient(
+            45deg,
+            rgba(0, 0, 0, 0.02) 0px,
+            rgba(0, 0, 0, 0.02) 1px,
+            transparent 1px,
+            transparent 10px
+    );
+}
+
+.about-content {
+    display: flex;
+    gap: 80px;
+}
+
+
+.profile-picture {
+    max-width: 200px;
+    height: auto;
+    border-radius: 15px;
 }
 
 .navbar-main{
@@ -27,15 +46,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row-reverse;
     padding: 0 20px;
-}
-
-.nav-student{
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #0e4070;
-    text-decoration: none;
 }
 
 .nav-links{
@@ -96,10 +108,18 @@ h2{
 }
 
 article{
-    border-left: 2px solid #0e4070;
-    padding-left: 20px;
+    border-left: 3px solid #0e4070;
+    padding: 20px;
     margin-bottom: 40px;
     position: relative;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 15px;
+    background-color: #F2EBD9;
+}
+
+article:hover {
+    transform: scale(1.02);
 }
 
 article::before {
@@ -111,7 +131,15 @@ article::before {
 }
 
 .diploma-image{
-    height: 430px;
+    height: 350px;
+}
+
+.broer-image{
+    height: 350px;
+}
+
+.project-image{
+  width: 500px;
 }
 
 .project-person {
@@ -138,4 +166,16 @@ footer{
     padding: 20px;
     text-align: center;
     box-shadow:0 -5px 5px -2px #0e4070;
+}
+
+.free-time {
+    display: flex;
+    gap: 20px;
+}
+
+/*GSM*/
+@media (max-width: 768px) {
+    .free-time {
+        flex-direction: column;
+    }
 }
