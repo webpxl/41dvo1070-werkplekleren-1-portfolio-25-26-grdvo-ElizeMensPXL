@@ -26,16 +26,23 @@ body {
 
 
 .profile-picture {
-    max-width: 200px;
+    max-width: 220px;
     height: auto;
     border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-picture:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
 }
 
 .navbar-main{
     background-color:#283D28;
     padding: 20px 0;
     position: sticky;
-    box-shadow:0 5px 5px -2px #0e4070;
+    box-shadow:0 5px 5px -2px #4a90e2;
     top:0;
     z-index: 1000;
 }
@@ -66,16 +73,28 @@ body {
 }
 
 .nav-links a:hover {
-    color: #0e4070;
+    color: #4a90e2;
 }
 
-header{
-    background-color: #283D28;
-    color: #F2EBD9;
-    padding: 60px 20px;
+header {
+    background: linear-gradient(135deg, #283d28 0%, #376c37 50%, #283d28 100%);
+    color: #F5F5DC;
+    padding: 120px 20px 80px;
     text-align: center;
     position: relative;
+    overflow: hidden;
+}
 
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="rgba(245,245,220,0.1)"/><circle cx="20" cy="80" r="15" fill="rgba(245,245,220,0.05)"/><circle cx="80" cy="20" r="20" fill="rgba(245,245,220,0.08)"/></svg>') repeat;
+    opacity: 0.3;
+    animation: float 20s ease-in-out infinite;
 }
 
 header h1{
@@ -160,12 +179,41 @@ article::before {
     border-radius: 20px;
 }
 
+.extra h2{
+    color: #F2EBD9;
+}
+
 footer{
     background-color: #283D28;
     color: #F2EBD9;
     padding: 20px;
     text-align: center;
-    box-shadow:0 -5px 5px -2px #0e4070;
+    box-shadow:0 -5px 5px -2px #4a90e2;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.social-links{
+    display: flex;
+    gap: 30px;
+}
+
+.social-links a img {
+    width: 30px;
+    height: auto;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    filter: invert(18%) sepia(51%) saturate(2855%) hue-rotate(193deg) brightness(91%) contrast(92%);
+    transform: scale(1.1);
 }
 
 .free-time {
