@@ -18,6 +18,102 @@ body {
             transparent 10px
     );
 }
+.navbar-main{
+    background-color:#283D28;
+    padding: 20px 0;
+    position: sticky;
+    box-shadow:0 5px 5px -2px #4a90e2;
+    top:0;
+    z-index: 1000;
+}
+
+.nav-container{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 0 20px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    align-items: center;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #F2EBD9;
+    font-weight: bold;
+    font-size: 0.9rem
+}
+
+.nav-links a:hover {
+    color: #4a90e2;
+}
+
+header {
+    background-color: #283D28;
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: #F2EBD9;
+}
+
+header::before {
+    content: "CREATIEF";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20vw;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: #F2EBD9;
+    opacity: 0.05;
+    z-index: 0;
+    white-space: nowrap;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, rgba(74, 144, 226, 0.2) 0%, transparent 70%);
+    z-index: 0;
+    filter: blur(50px);
+}
+
+header .hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.5rem, 10vw, 8.5rem);
+    text-transform: uppercase;
+    line-height: 0.85;
+    margin: 10px 0;
+    letter-spacing: -2px;
+}
+
+header p.portfolio {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #4a90e2;
+}
 
 .about-content {
     display: flex;
@@ -164,102 +260,6 @@ body {
     max-width: 300px;
 }
 
-.navbar-main{
-    background-color:#283D28;
-    padding: 20px 0;
-    position: sticky;
-    box-shadow:0 5px 5px -2px #4a90e2;
-    top:0;
-    z-index: 1000;
-}
-
-.nav-container{
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row-reverse;
-    padding: 0 20px;
-}
-
-.nav-links{
-    list-style: none;
-    display: flex;
-    gap: 50px;
-    margin: 0;
-    align-items: center;
-}
-
-.nav-links a{
-    text-decoration: none;
-    color: #F2EBD9;
-    font-weight: bold;
-    font-size: 0.9rem
-}
-
-.nav-links a:hover {
-    color: #4a90e2;
-}
-
-header {
-    background-color: #283D28;
-    height: 92vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    color: #F2EBD9;
-}
-
-header::before {
-    content: "CREATIEF";
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20vw;
-    font-family: 'Playfair Display', serif;
-    font-weight: 900;
-    color: #F2EBD9;
-    opacity: 0.05;
-    z-index: 0;
-    white-space: nowrap;
-}
-
-header::after {
-    content: '';
-    position: absolute;
-    width: 50vw;
-    height: 50vw;
-    background: radial-gradient(circle, rgba(74, 144, 226, 0.2) 0%, transparent 70%);
-    z-index: 0;
-    filter: blur(50px);
-}
-
-header .hero-text {
-    position: relative;
-    z-index: 1;
-}
-
-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(3.5rem, 10vw, 8.5rem);
-    text-transform: uppercase;
-    line-height: 0.85;
-    margin: 10px 0;
-    letter-spacing: -2px;
-}
-
-header p.portfolio {
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #4a90e2;
-}
 
 section{
     max-width: 1100px;
@@ -356,49 +356,6 @@ article::after {
     max-width: 600px;
     color: #444;
 }
-.extra{
-    background-color: #283D28;
-    color: #F2EBD9;
-    padding: 60px;
-    border-radius: 20px;
-}
-
-.extra h2{
-    color: #F2EBD9;
-}
-
-footer{
-    background-color: #283D28;
-    color: #F2EBD9;
-    padding: 20px;
-    text-align: center;
-    box-shadow:0 -5px 5px -2px #4a90e2;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.social-links{
-    display: flex;
-    gap: 30px;
-}
-
-.social-links a img {
-    width: 30px;
-    height: auto;
-    transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-.social-links a:hover img {
-    filter: invert(18%) sepia(51%) saturate(2855%) hue-rotate(193deg) brightness(91%) contrast(92%);
-    transform: scale(1.1);
-}
 
 .free-time {
     display: flex;
@@ -490,23 +447,94 @@ footer{
     margin-bottom: 20px;
     color:#F2EBD9;
 }
-/*GSM*/
-@media (max-width: 768px) {
-    .free-time {
-        flex-direction: column;
-    }
-    .interests h2 {
-         font-size: 2.8rem;
-     }
+
+footer{
+    background-color: #283D28;
+    color: #F2EBD9;
+    padding: 20px;
+    text-align: center;
+    box-shadow:0 -5px 5px -2px #4a90e2;
 }
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer a{
+    color: #F2EBD9;
+    font-weight: bolder;
+    font-size: 0.9rem
+}
+
+footer a:hover {
+    color: #4a90e2;
+}
+
+.social-links{
+    display: flex;
+    gap: 30px;
+}
+
+.social-links a img {
+    width: 30px;
+    height: auto;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    filter: invert(18%) sepia(51%) saturate(2855%) hue-rotate(193deg) brightness(91%) contrast(92%);
+    transform: scale(1.1);
+}
+
 @media (max-width: 992px) {
-    .motivation-grid {
-        grid-template-columns: 1fr;
-    }
-    .motivation-main-text h2 {
-        font-size: 3rem;
-    }
-    .motivation-side-note {
-        margin-top: 20px;
-    }
+    .motivation-grid { display: flex; flex-direction: column; gap: 30px; }
+    .motivation-main-text h2 { font-size: 2.8rem; line-height: 1.1; margin-bottom: 20px; }
+    .lead-text { max-width: 100%; font-size: 1.1rem; }
+    .motivation-side-note { margin-top: 20px; padding: 20px; background: rgba(74, 144, 226, 0.05); border-radius: 20px; }
+    .vertical-line { height: 40px; }
+    .accent-title-bg { font-size: 15vw; top: -40px; left: 5%; right: auto; }
+}
+
+@media (max-width: 768px) {
+    section { padding: 40px 20px; margin: 20px auto; overflow: hidden; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background-color: #283D28; padding: 20px; gap: 20px; box-shadow: 0 10px 15px rgba(0,0,0,0.2); z-index: 999; }
+    .nav-links.active { display: flex; }
+    .nav-container::before { content: "☰"; font-size: 2rem; color: #F2EBD9; cursor: pointer; display: block; }
+    .nav-container.menu-open::before { content: "✕"; }
+    header h1 { font-size: 3.2rem; letter-spacing: -1px; line-height: 1; }
+    header::before { font-size: 15vw; top: 45%; opacity: 0.03; }
+    header p.portfolio { font-size: 0.8rem; letter-spacing: 3px; }
+    header::after { width: 80vw; height: 80vw; filter: blur(30px); }
+    .about-content { flex-direction: column; gap: 40px; padding: 30px 20px; text-align: center; }
+    .about-text-wrapper::after { font-size: 5rem; left: 0; top: -30px; }
+    .profile-picture { width: 220px; height: 220px; }
+    .project-image, .diploma-image, .broer-image { width: 100% !important; height: auto !important; max-width: 100%; }
+    article { padding: 25px; }
+    article::after { font-size: 15vw !important; }
+    .project-informatie h3 { font-size: 1.8rem; }
+    .free-time { flex-direction: column; }
+    .interests h2 { font-size: 2.5rem; }
+    .interests::before { font-size: 15vw !important; }
+    .interest-item { padding: 30px 20px; }
+    .footer-content { flex-direction: column; gap: 20px; text-align: center; }
+}
+
+@media (max-width: 480px) {
+    .motivation-main-text h2 { font-size: 2.2rem; }
+    .motivation-editorial { padding: 60px 0; }
+}
+
+@media (max-width: 380px) {
+    header h1 { font-size: 2.6rem; }
+    header::before { font-size: 18vw; opacity: 0.02; }
+    .nav-links { gap: 15px; }
+}
+
+@media (min-width: 769px) {
+    .nav-container::before { display: none; }
 }
