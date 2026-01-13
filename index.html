@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="index.css" rel="stylesheet">
+    <script src="index.js"></script>
 </head>
 <body>
 <nav class="navbar-main">
@@ -20,16 +21,17 @@
     </div>
 </nav>
 
-<header>
+<header class="hero">
+    <div class="hero-text">
     <p class="portfolio">Portfolio</p>
     <h1>Elize Mens</h1>
     <p>Passievolle en gedreven student.</p>
-
+    </div>
 </header>
 
 <main>
-    <section id="about" class="about">
-        <h2>Korte Voorstelling</h2>
+   <!-- <section id="about" class="about">
+        <h2>Korte voorstelling</h2>
         <div class="about-content">
                 <div class="about-text">
             <p>Mijn naam is <strong>Elize Mens</strong>. Ik ben van het jaartal 2006 en ben graag creatief bezig. </p>
@@ -39,19 +41,59 @@
          <div class="about-image-container"> <img src="afbeeldingen/elize.jpg" alt="Elize Mens" class="profile-picture">
          </div>
         </div>
+    </section>-->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-text-wrapper">
+                    <span class="about-label">Korte voorstelling</span>
+                    <h2>Gedreven door creativiteit en balans.</h2>
+                    <div class="about-description">
+                        <p>Mijn naam is <strong>Elize Mens</strong>. Ik ben een creatief persoon.</p>
+                        <p>In mijn vrije tijd beoefen ik graag sporten.<br> Ook spendeer ik graag veel tijd met mijn familie.</p>
+                    </div>
+                </div>
+
+                <div class="about-image-wrapper">
+                    <div class="image-frame"></div> <img src="afbeeldingen/elize.jpg" alt="Elize Mens" class="profile-picture">
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="motivation" class="motivation">
+   <!-- <section id="motivation" class="motivation">
         <h2>Waarom deze passie?</h2>
         <p>Ik koos voor deze opleiding omdat ik de perfecte balans zocht tussen logisch denken en creatieve vrijheid. En ik heb in het middelbaar al 2 jaar een gelijkaardige richting gedaan Crossmedia.</p>
         <p>Als designer/programmeur ben ik sterk in creatief denken.</p>
+    </section>-->
+
+    <section id="motivation" class="motivation-editorial">
+        <div class="editorial-wrapper">
+            <div class="accent-title-bg">MOTIVATIE</div>
+
+            <div class="motivation-grid">
+                <div class="motivation-main-text">
+                    <span class="label">Mijn motivatie</span>
+                    <h2>Balans tussen <br><em>logica</em> & <em>vrijheid</em>.</h2>
+                    <p class="lead-text">
+                        Ik koos voor deze opleiding omdat ik de perfecte balans zocht tussen logisch denken en creatieve vrijheid.
+                        Met 2 jaar Crossmedia als basis, stop ik niet bij 'goed genoeg'.
+                    </p>
+                </div>
+
+                <div class="motivation-side-note">
+                    <div class="vertical-line"></div>
+                    <p>Als designer/programmeur ben ik sterk in creatief denken en in niet snel opgeven.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="projects" class="projects">
         <h2>Projecten</h2>
         <div class="projecten">
 
-            <h2 class="project">School Project:</h2>
+            <h2 class="project">School project:</h2>
             <article>
                 <img src="afbeeldingen/logo.png" alt="Project school" class="project-image">
                 <div class="project-informatie">
@@ -85,7 +127,7 @@
         </div>
     </section>
 
-    <section class="extra" id="extra">
+  <!--  <section class="extra" id="extra">
         <h2>De speciale sectie</h2>
         <p>Naast werken voor school hou ik mij bezig met:</p>
         <ul>
@@ -93,6 +135,28 @@
             <li>Andere passie: Ik heb mij vroeger ook altijd graag bezig gehouden met muziek. En sinds kort ben ik begonnen met piano te spelen en het te leren en dat vind ik heel leuk.</li>
             <li>Ik ben ook vaak op zoek om nieuwe dingen te leren. Niet alleen op vlak van school maar ook buiten school.</li>
         </ul>
+    </section>-->
+
+    <section class="interests" id="interests">
+        <h2>Buitenschoolse activiteiten</h2>
+        <p class="short-text">Naast mijn studie en professionele ontwikkeling, ben ik actief in verschillende creatieve en sportieve domeinen:</p>
+        <div class="interests-grid">
+            <div class="interest-item">
+               <img src=" afbeeldingen/sports-shoes.svg" alt="dit is een afbeelding van een loop schoen, voor sporten.">
+                <h3>Sport & Beweging</h3>
+                <p>In mijn vrije tijd sport ik graag. Mijn favoriete activiteiten zijn lopen en dansen (Jazz & HipHop).</p>
+            </div>
+            <div class="interest-item">
+                <img src=" afbeeldingen/music.svg" alt="muziek noot">
+                <h3>Muziek</h3>
+                <p>Ik heb altijd een passie gehad voor muziek. Sinds kort ben ik begonnen met piano spelen en vind dit een geweldige creatieve uitlaatklep.</p>
+            </div>
+            <div class="interest-item">
+                <img src=" afbeeldingen/knowledge.svg" alt="dit is een afbeelding van een hoofd van een persoon, dat kennis betekent.">
+                <h3>Levenslang Leren</h3>
+                <p>Ik ben altijd op zoek naar nieuwe kennis en vaardigheden. Dit geldt niet alleen voor school, maar ook voor persoonlijke ontwikkeling buiten de academische wereld.</p>
+            </div>
+        </div>
     </section>
 </main>
 
@@ -101,7 +165,7 @@
     <p>&copy; 2026 - Portfolio Elize Mens</p>
     <div class="social-links">
         <a href="#" ><img src="afbeeldingen/github-142-svgrepo-com.svg"> </a>
-        <a href="#"> <img src="afbeeldingen/instagram-svgrepo-com.svg"> </i></a>
+        <a href="#"> <img src="afbeeldingen/instagram-svgrepo-com.svg"> </a>
     </div>
     </div>
 </footer>
