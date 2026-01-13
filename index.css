@@ -25,7 +25,7 @@ body {
     gap: 80px;
     position: relative;
     padding: 40px;
-    background: rgba(40, 61, 40, 0.03);
+    background-color: rgba(40, 61, 40, 0.03);
     border-radius: 50px;
 }
 
@@ -72,7 +72,7 @@ body {
     width: 120%;
     height: 120%;
     transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(74, 144, 226, 0.50) 0%, transparent 70%);
+    background-: radial-gradient(circle, rgba(74, 144, 226, 0.50) 0%, transparent 70%);
     z-index: 1;
 }
 
@@ -216,37 +216,62 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #283d28 0%, #376c37 50%, #283d28 100%);
-    color: #F5F5DC;
-    padding: 120px 20px 80px;
+    background-color: #283D28;
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     position: relative;
     overflow: hidden;
-    height: 92vh;
+    color: #F2EBD9;
 }
 
 header::before {
+    content: "CREATIEF";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20vw;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: #F2EBD9;
+    opacity: 0.05;
+    z-index: 0;
+    white-space: nowrap;
+}
+
+header::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="rgba(245,245,220,0.1)"/><circle cx="20" cy="80" r="15" fill="rgba(245,245,220,0.05)"/><circle cx="80" cy="20" r="20" fill="rgba(245,245,220,0.08)"/></svg>') repeat;
-    opacity: 0.3;
-    animation: float 20s ease-in-out infinite;
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, rgba(74, 144, 226, 0.2) 0%, transparent 70%);
+    z-index: 0;
+    filter: blur(50px);
 }
 
-header h1{
+header .hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 8vw;
+    font-size: clamp(3.5rem, 10vw, 8.5rem);
     text-transform: uppercase;
-    margin: 0;
-
+    line-height: 0.85;
+    margin: 10px 0;
+    letter-spacing: -2px;
 }
 
-header p{
-    font-size: 1.5rem;
+header p.portfolio {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #4a90e2;
 }
 
 section{
@@ -258,23 +283,33 @@ section{
 h2{
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
-    color: #0e4070;
+    color: #4a90e2;
     margin-bottom: 20px;
 }
 
-.project{
-    font-weight: bold;
+
+.projecten {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-article{
-    border-left: 3px solid #0e4070;
-    padding: 20px;
-    margin-bottom: 40px;
+.project {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #283D28;
     position: relative;
-    transition: 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-radius: 15px;
-    background-color: #F2EBD9;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    background-color: rgba(40, 61, 40, 0.03);
+    border-radius: 40px;
+    border-left: 4px solid #4a90e2;
+    position: relative;
 }
 
 article:hover {
@@ -285,21 +320,20 @@ article::before {
     content: '✦';
     position: absolute;
     left: -8px;
-    color: #0e4070;
-    background: #F2EBD9;
+    color: #4a90e2;
+    background-color: #F2EBD9;
+    font-size: 1.19rem;
 }
-
-.diploma-image{
-    height: 350px;
-}
-
-.broer-image{
-    height: 350px;
-}
-
-.project-image{
-  width: 500px;
-}
+article::after {
+     content: "PROJECTEN";
+     position: absolute;
+     bottom: 10px;
+     right: 20px;
+     font-size: 4rem;
+     font-weight: 900;
+     color: #283D28;
+     opacity: 0.04;
+ }
 
 .project-person {
     background-color: #283D28;
@@ -311,7 +345,30 @@ article::before {
     margin-right: 5px;
     margin-top: 10px;
 }
+.diploma-image{
+    height: 350px;
+}
 
+.broer-image{
+    height: 450px;
+}
+
+.project-image{
+    width: 500px;
+}
+
+.project-informatie h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #283D28;
+    margin: 10px 0;
+}
+
+.project-informatie p {
+    font-size: 1.19rem;
+    max-width: 600px;
+    color: #444;
+}
 .extra{
     background-color: #283D28;
     color: #F2EBD9;
@@ -361,10 +418,77 @@ footer{
     gap: 20px;
 }
 
+.interests::before {
+    content: "PASSIES";
+    position: absolute;
+    top: 50px;
+    left: 8%;
+    font-size: 13vw;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: #283D28;
+    opacity: 0.04;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.interests-header {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    position: relative;
+    z-index: 1;
+}
+
+.interests h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    line-height: 0.9;
+    color: #283D28;
+    margin-bottom: 20px;
+}
+
+.short-text {
+    color: #444;
+    font-size: 1.19rem;
+    line-height: 1.6;
+    border-left: 3px solid #4a90e2;
+    padding-left: 20px;
+    max-width: 600px;
+}
+
+.interest-item {
+    background-color: rgba(40, 61, 40, 0.03) !important;
+    padding: 40px;
+    border-radius: 40px;
+    border-top: 4px solid #4a90e2;
+    transition: transform 0.4s ease, background 0.4s ease;
+    text-align: left;
+}
+
+.interest-item:hover {
+    transform: translateY(-10px);
+    background-color: rgba(40, 61, 40, 0.06) !important;
+}
+
+.interest-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    color: #283D28;
+    margin-bottom: 15px;
+}
+
+.interest-item p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
 .interests {
-    background: #283D28;
+    background-color: #F2EBD9;
     padding: 60px 20px;
     border-radius: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
 .interests-grid {
@@ -374,36 +498,19 @@ footer{
     margin-top: 30px;
 }
 
-.interests h2, .short-text{
-    color: #F2EBD9;
-}
-
-.interest-item {
-    background-color: #F2EBD9;
-    color: #283D28;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.interest-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
 .interest-item img {
    width: 50px;
     margin-bottom: 20px;
     color:#F2EBD9;
 }
-
 /*GSM*/
 @media (max-width: 768px) {
     .free-time {
         flex-direction: column;
     }
+    .interests h2 {
+         font-size: 2.8rem;
+     }
 }
 @media (max-width: 992px) {
     .motivation-grid {
