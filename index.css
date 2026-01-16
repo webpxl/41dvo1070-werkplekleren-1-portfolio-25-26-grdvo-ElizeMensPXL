@@ -490,7 +490,13 @@ footer a:hover {
     filter: invert(18%) sepia(51%) saturate(2855%) hue-rotate(193deg) brightness(91%) contrast(92%);
     transform: scale(1.1);
 }
-
+.pdf-title {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    color: #283D28;
+}
 .pdf-container {
     max-width: 1000px;
     margin: 40px auto;
