@@ -4,10 +4,12 @@ Dit project is mijn persoonlijke portfolio website.
 
 ### AI Tools
 Voor de realisatie van dit project heb ik gebruikgemaakt van de volgende AI-assistentie:
-* **Gemini (Google AI):** Gebruikt voor:
+* **Gemini (Google AI) en github copilot:** Gebruikt voor:
     * Het verfijnen van de visuele identiteit (Editorial/Magazine stijl).
-    * Het schrijven en optimaliseren van sommige delen van de CSS-grid lay-outs en animaties.
-    * Het implementeren van de Intersection Observer API in JavaScript voor de scroll-effecten.
+      * Het schrijven en optimaliseren van sommige delen van de CSS-grid lay-outs voor 
+        het responsive te maken voor elke apparaat en animaties.
+    * Het implementeren van de scroll-effecten in JavaScript.
+    * En voor de hulp om mijn pdf via embed in mijn website te krijgen en om deze responsive te maken voor alle apparaten.
     * Hulp bij opzet van de privacy-richtlijnen en informatie hoe ik een readMe moest maken.
 
 ### Externe Bronnen & Materialen

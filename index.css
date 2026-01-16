@@ -491,6 +491,106 @@ footer a:hover {
     transform: scale(1.1);
 }
 
+.pdf-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.pdf-wrapper {
+    width: 100%;
+    height: 80vh;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(40, 61, 40, 0.1);
+    border: 4px solid #283D28;
+    background-color: white;
+}
+
+.pdf-wrapper embed {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.pdf-fallback-box {
+    background-color: rgba(40, 61, 40, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-left: 4px solid #4a90e2;
+}
+
+.pdf-fallback-box p {
+    font-size: 1.2rem;
+    color: #283D28;
+    font-family: 'Playfair Display', serif;
+}
+
+.btn-download {
+    text-decoration: none;
+    background-color: #283D28;
+    color: #F2EBD9 !important;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn-download:hover {
+    background-color: #4a90e2;
+    transform: translateY(-3px);
+    color: white !important;
+}
+
+@media (max-width: 768px) {
+    .pdf-wrapper {
+        display: none;
+    }
+
+    .pdf-fallback-box {
+        background-color: white;
+        border: 2px solid #283D28;
+        padding: 40px 20px;
+        margin-top: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .pdf-fallback-box p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        visibility: hidden;
+        position: relative;
+    }
+
+    .pdf-fallback-box p::after {
+        content: "Bekijk mijn reflectie & leerdoelen";
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        color: #283D28;
+        font-weight: bold;
+    }
+
+    .btn-download {
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 1.1rem;
+    }
+}
+
 @media (max-width: 992px) {
     .motivation-grid { display: flex; flex-direction: column; gap: 30px; }
     .motivation-main-text h2 { font-size: 2.8rem; line-height: 1.1; margin-bottom: 20px; }
