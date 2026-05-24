@@ -34,9 +34,9 @@ h2 {
 
 .navbar-main {
     background-color: #283D28;
-    padding: 20px 0;
+    padding: 15px 0;
     position: sticky;
-    box-shadow: 0 5px 5px -2px #4a90e2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     top: 0;
     z-index: 1000;
 }
@@ -45,16 +45,15 @@ h2 {
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-direction: row-reverse;
     padding: 0 20px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 50px;
+    gap: 40px;
     margin: 0;
     align-items: center;
 }
@@ -63,7 +62,9 @@ h2 {
     text-decoration: none;
     color: #F2EBD9;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
