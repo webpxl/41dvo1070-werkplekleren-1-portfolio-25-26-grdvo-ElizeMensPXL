@@ -32,6 +32,40 @@ h2 {
     margin-bottom: 20px;
 }
 
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    color: #283D28;
+    line-height: 0.9;
+    margin-bottom: 40px;
+}
+
+.main-title em {
+    color: #4a90e2;
+    font-style: italic;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-logo img {
+    height: 45px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        justify-content: space-between;
+    }
+}
 .navbar-main {
     background-color: #283D28;
     padding: 15px 0;
@@ -304,19 +338,6 @@ main {
     align-items: flex-start;
 }
 
-.motivation-main-text h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 4.5rem;
-    color: #283D28;
-    line-height: 0.9;
-    margin-bottom: 40px;
-}
-
-.motivation-main-text h2 em {
-    color: #4a90e2;
-    font-style: italic;
-}
-
 .lead-text {
     font-size: 1.19rem;
     line-height: 1.6;
@@ -347,13 +368,6 @@ main {
     max-width: 1100px;
     margin: 40px auto;
     padding: 40px 20px;
-}
-
-.skills-block h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: #283D28;
-    margin-bottom: 25px;
 }
 
 .skills-list {
@@ -550,10 +564,6 @@ article::after {
     max-width: 1100px;
 }
 
-.wpl2-section h2 {
-    margin-bottom: 40px;
-}
-
 .wpl2-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -591,13 +601,6 @@ article::after {
     grid-column: 1 / -1;
 }
 
-.wpl2-deliverables {
-    display: flex;
-    gap: 20px;
-    margin-top: 25px;
-    flex-wrap: wrap;
-}
-
 .interests {
     background-color: #F2EBD9;
     padding: 60px 20px;
@@ -625,14 +628,6 @@ article::after {
     margin: 0 auto 60px auto;
     position: relative;
     z-index: 1;
-}
-
-.interests h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 4.5rem;
-    line-height: 0.9;
-    color: #283D28;
-    margin-bottom: 20px;
 }
 
 .short-text {
@@ -701,13 +696,46 @@ footer {
     padding: 20px;
 }
 
-footer a {
-    color: #F2EBD9;
-    font-weight: bolder;
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+}
+
+.footer-left p {
+    margin: 0;
     font-size: 0.9rem;
 }
 
-footer a:hover {
+.footer-left .privacy-btn {
+    font-weight: normal;
+    font-size: 0.85rem;
+    opacity: 0.8;
+    color: #F2EBD9;
+    text-decoration: none;
+}
+
+.footer-contact {
+    text-align: center;
+}
+
+.footer-contact p {
+    margin: 0 0 5px 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    color: #F2EBD9;
+}
+
+.contact-email {
+    font-size: 1.1rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-weight: bold;
+    color: #F2EBD9;
+}
+
+.contact-email:hover, .footer-left .privacy-btn:hover {
     color: #4a90e2;
 }
 
@@ -725,57 +753,6 @@ footer a:hover {
 .social-links a:hover img {
     filter: invert(18%) sepia(51%) saturate(2855%) hue-rotate(193deg) brightness(91%) contrast(92%);
     transform: scale(1.1);
-}
-
-.pdf-title {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    padding: 0 20px;
-    color: #283D28;
-}
-
-.pdf-container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.pdf-wrapper {
-    width: 100%;
-    height: 80vh;
-    border-radius: 30px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(40, 61, 40, 0.1);
-    border: 4px solid #283D28;
-    background-color: white;
-}
-
-.pdf-wrapper embed {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.pdf-fallback-box {
-    background-color: rgba(40, 61, 40, 0.05);
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    border-left: 4px solid #4a90e2;
-}
-
-.pdf-fallback-box p {
-    font-size: 1.2rem;
-    color: #283D28;
-    font-family: 'Playfair Display', serif;
 }
 
 .btn-download {
@@ -796,6 +773,70 @@ footer a:hover {
     color: white !important;
 }
 
+.pdf-title {
+    text-align: center;
+    margin-top: 60px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #283D28;
+}
+
+.pdf-container {
+    max-width: 1000px;
+    margin: 20px auto 80px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.pdf-wrapper {
+    width: 100%;
+    height: 75vh;
+    min-height: 500px;
+    background-color: #283D28;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(40, 61, 40, 0.15);
+    border: 4px solid #F2EBD9;
+    position: relative;
+}
+
+.pdf-wrapper embed {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.pdf-fallback-box {
+    background-color: rgba(40, 61, 40, 0.05);
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+    border-top: 4px solid #4a90e2;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+}
+
+.pdf-fallback-box p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .pdf-wrapper {
+        height: 60vh;
+        border-radius: 15px;
+    }
+
+    .pdf-title {
+        margin-top: 40px;
+    }
+}
+
 @media (min-width: 769px) {
     .nav-container::before {
         display: none;
@@ -803,15 +844,15 @@ footer a:hover {
 }
 
 @media (max-width: 992px) {
+    .main-title {
+        font-size: 2.8rem;
+        line-height: 1.1;
+        margin-bottom: 20px;
+    }
     .motivation-grid {
         display: flex;
         flex-direction: column;
         gap: 30px;
-    }
-    .motivation-main-text h2 {
-        font-size: 2.8rem;
-        line-height: 1.1;
-        margin-bottom: 20px;
     }
     .lead-text {
         max-width: 100%;
@@ -835,6 +876,10 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+    .nav-container {
+        justify-content: flex-end;
+    }
+
     section {
         padding: 40px 20px;
         margin: 20px auto;
@@ -934,9 +979,6 @@ footer a:hover {
     .wpl2-deliverables .btn-download {
         text-align: center;
     }
-    .interests h2 {
-        font-size: 2.5rem;
-    }
     .interests::before {
         font-size: 15vw !important;
     }
@@ -948,32 +990,6 @@ footer a:hover {
         gap: 20px;
         text-align: center;
     }
-    .pdf-wrapper {
-        display: none;
-    }
-    .pdf-fallback-box {
-        background-color: white;
-        border: 2px solid #283D28;
-        padding: 40px 20px;
-        margin-top: 20px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    .pdf-fallback-box p {
-        font-size: 1.1rem;
-        margin-bottom: 20px;
-        visibility: hidden;
-        position: relative;
-    }
-    .pdf-fallback-box p::after {
-        content: "Bekijk mijn reflectie & leerdoelen";
-        visibility: visible;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        color: #283D28;
-        font-weight: bold;
-    }
     .btn-download {
         display: block;
         width: 100%;
@@ -983,7 +999,7 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
-    .motivation-main-text h2 {
+    .main-title {
         font-size: 2.2rem;
     }
     .motivation-editorial {
